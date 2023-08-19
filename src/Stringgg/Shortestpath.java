@@ -2,7 +2,7 @@ package Stringgg;
 
 public class Shortestpath {
     public static void main(String[] args) {
-        String path = "WW";
+        String path = "WWWSSSS";
         System.out.println(shortPath(path));
     }
     public static float shortPath(String name){
