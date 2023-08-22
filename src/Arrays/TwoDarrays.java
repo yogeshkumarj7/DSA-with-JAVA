@@ -2,7 +2,6 @@ package Arrays;
 
 import java.util.Arrays;
 import java.util.Scanner;
-
 public class TwoDarrays {
     public static void main(String[] args) {
 //        System.out.println("Enter the elements for ur array");

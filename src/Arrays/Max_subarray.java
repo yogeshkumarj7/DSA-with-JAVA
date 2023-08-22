@@ -9,7 +9,6 @@ public class Max_subarray {
     public static void maxSubarray(int arr[]) {
         int cs = 0;
         int ms = 0;
-
         for (int i = 0; i < arr.length; i++) {
             cs=cs+arr[i];
             if (cs<0){
