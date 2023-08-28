@@ -1,5 +1,5 @@
 package Arrays;
-
+//while s<e | swap |
 public class ReverseArray {
     public static void main(String[] args) {
         int arr[]={7,5,3,9,6,1,2,4,8};

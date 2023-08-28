@@ -1,6 +1,6 @@
 package BAcktracking;
 
-public class Maze {
+public class Maze_waysPrint {
     public static void main(String[] args) {
         maze("",3,3);
     }
