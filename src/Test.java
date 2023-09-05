@@ -1,21 +1,36 @@
+import Arrays.Binary;
 public class Test {
-    //Subarray
-//    Use the 3loops
-//    1 for start | 1 for end and last for printing it and deciding the stream of the subarray
-    static int subArray(int arr[]){
 
-        int ln=0;
-        for (int i=0;i< arr.length;i++){
-            if (arr[i]>ln){
-                ln=arr[i];
-            }
+//    Created anode class which defining the architecture of the node class
+    static class Node{
+        int data;
+        Node right;
+        Node left;
+        Node(int data){
+            this.data=data;
         }
-        return ln;
     }
-    public static void main(String[] args) {
-        int arr[]={1,-2,6,-1,3,17};
-        System.out.println(subArray(arr));
 
+//  Binary tree's node creation
+    static class BinarytreeBuilder{
+      static int idx=-1;
+        public static Node buildRoot(int []nodes){
+            idx++;
+            if (idx >= nodes.length || nodes[idx] == -1) {
+                return null;
+            }
+            Node newnode=new Node(nodes[idx]);
+            newnode.left=buildRoot(nodes);
+            newnode.right=buildRoot(nodes);
+            return newnode;
+        }
+    }
+
+    public static void main(String[] args) {
+        int nodess[]={1,7,3,4,-1,5,-1,6,7,8,9,-1};
+        BinarytreeBuilder t=new BinarytreeBuilder();
+        Node root=t.buildRoot(nodess);
+        System.out.println(root.data);
 
     }
 }
