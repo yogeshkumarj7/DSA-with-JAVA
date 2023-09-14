@@ -23,7 +23,7 @@ public class ll {
     }
 
     //    addFirst............................
-    public void addFirst(int value) {
+    public void addFirst(int value){
 //    Created a new node to add at the beginning of the list
         Node node = new Node(value);
         size++;
@@ -50,9 +50,11 @@ public class ll {
 //    Add at particular index.....................
 
     public void add(int value, int index) {
+//        At index 0
         if (index == 0) {
             addFirst(value);
         }
+//        At last
         if (index == size) {
             addLast(value);
         }
@@ -65,7 +67,6 @@ public class ll {
         node.next = temp.next;
         temp.next = node;
     }
-
 
     //    deleteFirst
     static int deleteFirst() {
@@ -133,6 +134,7 @@ public class ll {
         Node prev = null;
         Node curr = tail = head;
         Node next;
+
 
         while (curr != null) {
             next = curr.next;

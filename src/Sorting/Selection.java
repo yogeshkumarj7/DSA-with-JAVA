@@ -8,14 +8,11 @@ public class Selection {
         public static void selectionSort(int []arr){
 //        int n=arr.length;
             for (int i=0;i<arr.length-1;i++){
-                int min=i;
-                for (int j=i+1;j<arr.length;j++){
-                    if (arr[min]<arr[j]){
-                       swap(arr,min,j);
+                for (int j=i+1;j<arr.length-1;j++){
+                    if (arr[i]>arr[j]){
+                       swap(arr,i,j);
                     }
                 }
-                //Swapped
-
             }
         }
         public static void printArr(int arr[]){
@@ -28,6 +25,6 @@ public class Selection {
             arr[a]=arr[b];
             arr[b]=temp;
     }
-    }
+}
 
 

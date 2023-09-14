@@ -3,7 +3,7 @@ package Stringgg;
 
 public class Uppercase {
     public static void main(String[] args) {
-        String sentence="I am yogeshkumar";
+        String sentence="i am yogeshkumar";
         System.out.println(upperCase(sentence));
     }
     public static String upperCase(String str){
