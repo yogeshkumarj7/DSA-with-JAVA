@@ -12,6 +12,7 @@ public class QueueusingArray {
         }
 //        isEmpty
         public static boolean isEmpty(){
+
             return rear==-1;
         }
 

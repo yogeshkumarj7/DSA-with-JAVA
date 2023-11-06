@@ -3,7 +3,7 @@ package Recursion;
 public class isArraySorted {
     public static boolean isArraySorted(int arr[],int i){
 
-      if (i == arr.length-1){  //***
+      if (i == arr.length-1){
           return true;
       }
       if (arr[i]>arr[i+1]){

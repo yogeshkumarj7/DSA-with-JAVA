@@ -6,7 +6,6 @@ public class linearSearch {
             if (arr[i]==target){
                 return i;
             }
-
         }
         return -1;
     }
@@ -14,5 +13,4 @@ public class linearSearch {
         int arr[] = {4, 6, 7, 9, 10, 13, 15, 16};
         System.out.println(linearS(arr,10));
     }
-
 }

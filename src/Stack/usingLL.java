@@ -6,10 +6,12 @@ public class usingLL {
         Node next;
         Node(int data){
             this.data=data;
-            this.next=null;        }
+            this.next=null;
+        }
     }
     static class Stack{
         static Node head=null;
+
 //        isEmpty
         public static boolean isEmpty(){
             return head==null;

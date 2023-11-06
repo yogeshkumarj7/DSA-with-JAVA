@@ -7,19 +7,18 @@ public class ll {
     static Node tail;
     static int size;
 
+
     //  Node class
     class Node {
-        int value;
-        Node next;
-
-        Node(int value) {
-            this.value = value;
-        }
-
-        Node(int value, Node next) {
-            this.value = value;
-            this.next = next;
-        }
+       int value;
+       Node next;
+       Node(int value){
+           this.value=value;
+       }
+       Node (int value,Node next){
+           this.next=next;
+           this.value=value;
+       }
     }
 
     //    addFirst............................
@@ -102,6 +101,7 @@ public class ll {
         int value = temp.next.value;
         temp.next = null;
         temp = tail;
+        size--;
         return value;
     }
 
@@ -130,12 +130,10 @@ public class ll {
     }
 
     //    Reverse a linked list(Iterative Approach)
-    public void revList() {
+    public static void revList() {
         Node prev = null;
         Node curr = tail = head;
         Node next;
-
-
         while (curr != null) {
             next = curr.next;
             curr.next = prev;
@@ -147,52 +145,54 @@ public class ll {
 
 //    Find and remove nth Node from the Linked List
 
-    public void deleteNthfromEnd(int n) {
+//    public void deleteNthfromEnd(int n) {
+//
+////        Calculate size of linked list
+//        int size = 0;
+//        Node temp = head;
+//        while (temp != null) {
+//            temp = temp.next;
+//            size++;
+//        }
+//
+////        ** delete the head (no previous available)
+//        if (n == size) {
+//            head = head.next;
+//            return;
+//        }
+//
+////        size-1
+//        int itoFind = size - n;
+//        Node prev = head;
+//        for (int i = 1; i < itoFind; i++) {
+//            prev = prev.next;
+//        }
+//        prev.next = prev.next.next;
+//        return;
+//    }
 
-//        Calculate size of linked list
-        int size = 0;
-        Node temp = head;
-        while (temp != null) {
-            temp = temp.next;
-            size++;
-        }
-
-//        ** delete the head (no previous available)
-        if (n == size) {
-            head = head.next;
-            return;
-        }
-
-//        size-1
-        int itoFind = size - n;
-        Node prev = head;
-        for (int i = 1; i < itoFind; i++) {
-            prev = prev.next;
-        }
-        prev.next = prev.next.next;
-        return;
-    }
-
-//    Linked list is palindrome or not
+//    Linked list is palindrome or not.............
 
 //    Find the middle of the ll
 
 //    Using slow fast-method
-    public Node findMid(Node head) {
+   static public Node findMid(Node head) {
         Node slow = head;
         Node fast = head;
-        while (slow!=null && fast.next !=null){
+        while (fast!=null && fast.next !=null){
             slow=slow.next; //+1
             fast=fast.next.next; //+2
         }
         return slow;
     }
 
+
+
 //    Checking for the palindrome
 
-    public boolean checkPalindrome(){
+    static public boolean checkPalindrome(){
 
-//      Corner cases
+//      Corner cases(If the list consist of the no element or the one element only)
         if (head==null || head.next==null){
             return true;
         }
@@ -224,15 +224,33 @@ public class ll {
         return true;
     }
 
-
-
+//    Detecting a cycle in the linked List
+    static boolean isFormingCycle(){
+        Node slow=head;
+        Node fast=head;
+        while (fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+            if (slow==fast){
+                return true;
+            }
+        }
+        return false;
+    }
     public static void main(String[] args) {
         ll list=new ll();
         list.addFirst(10);
         list.addFirst(20);
         list.addFirst(30);
+        list.addFirst(30);
+        list.addFirst(20);
+        list.addFirst(10);
         list.printList();
+        System.out.println(ll.checkPalindrome());
 
-        System.out.println(list.checkPalindrome());
+
+
+//        System.out.println(list.checkPalindrome());
     }
 }
+
