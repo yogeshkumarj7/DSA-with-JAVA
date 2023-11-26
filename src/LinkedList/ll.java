@@ -85,6 +85,7 @@ public class ll {
     }
 
     //    deleteLast
+//    Assign temp as a head to get size-2 node
     public static int deleteLast() {
         if (size == 0) {
             System.out.println("Linked List is empty");
