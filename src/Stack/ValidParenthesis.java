@@ -5,7 +5,6 @@ import java.util.Stack;
 //{[]}------------->Valid
 //{[}]------------->Not Valid
 public class ValidParenthesis {
-
     static boolean isValid(String str){
         Stack<Character>s=new Stack<>();
         for (int i=0;i<str.length();i++){
