@@ -26,7 +26,7 @@ public class DigonalSum {
 
 //                SD
                 if (i!=arr.length-1-i){
-                    sum+=arr[i][arr.length-i-1];
+                    sum+=arr[i][arr.length-i-1];     //**********************
                 }
             }
             System.out.println(sum);
