@@ -16,3 +16,9 @@ public class PrintSeries {
     }
 
 }
+
+class {
+public static void main(String args[]){
+
+}
+}
