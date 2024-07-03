@@ -1,4 +1,4 @@
-package Arrays;
+package src.Arrays;
 
 import java.util.Scanner;
 //    For avoid integer overflow use-->mid=(start-end)/2+end;

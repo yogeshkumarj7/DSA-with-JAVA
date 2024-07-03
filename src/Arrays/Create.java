@@ -1,4 +1,4 @@
-package Arrays;
+package src.Arrays;
 
 public class Create {
     public static void main(String[] args) {
